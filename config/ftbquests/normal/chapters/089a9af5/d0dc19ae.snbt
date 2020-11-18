@@ -1,0 +1,23 @@
+{
+	x: -0.5d,
+	y: -2.5d,
+	shape: "gear",
+	can_repeat: true,
+	hide_dependency_lines: true,
+	dependencies: [
+		"8a2ad718",
+		"b5ba757c"
+	],
+	tasks: [{
+		uid: "78962c20",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 32002"
+		}]
+	}],
+	rewards: [{
+		uid: "7a92f56e",
+		type: "ftbmoney:money",
+		ftb_money: 64L
+	}]
+}

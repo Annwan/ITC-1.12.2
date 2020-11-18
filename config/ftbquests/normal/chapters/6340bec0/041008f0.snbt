@@ -1,0 +1,20 @@
+{
+	x: -2.5d,
+	y: -2.5d,
+	text: [
+		"Aledis2000 et moi remercions LunaFreyja pour héberger sur son serveur le mod pack d'ITC en version 1.12.2", 
+		"Avant de commencer, Aledis2000 vas faire un jet de dés sur ce site : https:/www.randomorg/", 
+		"Une foit le jet de dés éffectuer on vous mettra dans les cube qui contient votre numéro de dé", 
+		"Vous aurez un livre et un kit de démarage"
+	],
+	tasks: [{
+		uid: "846fd7c9",
+		type: "checkmark",
+		title: "Start"
+	}],
+	rewards: [{
+		uid: "83d18103",
+		type: "command",
+		command: "/say Allez voir https://docs.google.com/document/d/1lCW2c572UpEg-R7YDkH-WMdSUu_fa42McYWuf20y5J4/edit?usp=sharing"
+	}]
+}

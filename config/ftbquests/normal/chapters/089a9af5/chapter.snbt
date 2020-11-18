@@ -1,0 +1,7 @@
+{
+	title: "ITC Coin",
+	icon: "gregtech:meta_item_1 1 32000",
+	always_invisible: false,
+	group: -1313417334,
+	default_quest_shape: ""
+}

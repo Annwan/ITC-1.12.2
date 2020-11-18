@@ -1,0 +1,27 @@
+{
+  "weight": 70,
+  "density": 0.75,
+  "min_height": 50,
+  "dimension_filter": ["is_nether"],
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [16, 16]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 25,
+          "value": "ore:lignite"
+        },
+        {
+          "weight": 75,
+          "value": "ore:coal"
+        }
+      ]
+    }
+  }
+}

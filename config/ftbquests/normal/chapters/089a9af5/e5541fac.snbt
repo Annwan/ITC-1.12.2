@@ -1,0 +1,22 @@
+{
+	x: 3.5d,
+	y: -2.5d,
+	shape: "gear",
+	can_repeat: true,
+	dependencies: [
+		"8a2ad718",
+		"f2b0a4e7"
+	],
+	tasks: [{
+		uid: "34109c5c",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 32005"
+		}]
+	}],
+	rewards: [{
+		uid: "286c83ac",
+		type: "ftbmoney:money",
+		ftb_money: 32768L
+	}]
+}

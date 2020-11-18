@@ -1,0 +1,22 @@
+{
+	x: -4.5d,
+	y: -4.5d,
+	can_repeat: true,
+	tasks: [{
+		uid: "f0424430",
+		type: "item",
+		items: [{
+			item: "minecraft:stone"
+		}]
+	}],
+	rewards: [{
+		uid: "6900c9d9",
+		type: "item",
+		item: "minecraft:sapling 1 2"
+	},
+	{
+		uid: "083ebc07",
+		type: "ftbmoney:money",
+		ftb_money: 10L
+	}]
+}

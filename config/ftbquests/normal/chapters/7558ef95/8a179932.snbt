@@ -1,0 +1,20 @@
+{
+	x: 0.5d,
+	y: -1.0d,
+	shape: "pentagon",
+	text: [
+		"En premiers lieux il faut remercier LunaFreyja pour héberger le serveur pour le remaster d'ITC.",
+		"",
+		"Le lien qui apparaîtra dans le tchate sera les règle pour ce serveur."
+	],
+	tasks: [{
+		uid: "645a66c5",
+		type: "checkmark",
+		title: "Start"
+	}],
+	rewards: [{
+		uid: "e5dab0b5",
+		type: "command",
+		command: "/say allez sur le site: https://docs.google.com/document/d/1lCW2c572UpEg-R7YDkH-WMdSUu_fa42McYWuf20y5J4/edit"
+	}]
+}

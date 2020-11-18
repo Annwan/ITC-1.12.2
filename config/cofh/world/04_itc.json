@@ -1,0 +1,162 @@
+{
+    "priority": 1000000000000,
+	"dependencies": "thermalfoundation",
+	"populate": {
+		"greg_iron": {
+			"enabled": "true",
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "gregtech:ore_iron_0",
+					"properties": {
+						"type": "iron"
+					},
+                    "weight" : 40
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 8
+			},
+			"cluster-count": 16,
+			"min-height": 0,
+			"max-height": 100,
+			"retrogen": "true",
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+		"greg_gold": {
+			"enabled": "true",
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "gregtech:ore_gold_0",
+					"properties": {
+						"type": "gold"
+                    },
+                    "weight" : 40
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 8
+			},
+			"cluster-count": 16,
+			"min-height": 0,
+			"max-height": 100,
+			"retrogen": "true",
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+		"greg_copper": {
+			"enabled": "true",
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+						"name": "gregtech:ore_copper_0",
+						"properties": {
+							"type": "copper"
+						},
+						"weight": 40
+					},
+				"material": "minecraft:stone",
+				"cluster-size": 8
+			},
+			"cluster-count": 16,
+			"min-height": 0,
+			"max-height": 100,
+			"retrogen": "true",
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+		"greg_tin": {
+			"enabled": "true",
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+						"name": "gregtech:ore_tin_0",
+						"properties": {
+							"type": "tin"
+						},
+						"weight": 40
+					},
+				"material": "minecraft:stone",
+				"cluster-size": 8
+			},
+			"cluster-count": 16,
+			"min-height": 0,
+			"max-height": 100,
+			"retrogen": "true",
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+		"greg_nickel": {
+			"enabled": "true",
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+					"name": "gregtech:ore_nickel_0",
+					"properties": {
+						"type": "nickel"
+					},
+                    "weight": 40
+				},
+				"material": "minecraft:stone",
+				"cluster-size": 4
+			},
+			"cluster-count": 16,
+			"min-height": 0,
+			"max-height": 100,
+			"retrogen": "true",
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		},
+		"greg_silver": {
+			"enabled": "true",
+			"distribution": "uniform",
+			"generator": {
+				"block": {
+						"name": "gregtech:ore_silver_0",
+						"properties": {
+							"type": "silver"
+						},
+						"weight": 40
+					},
+				"material": "minecraft:stone",
+				"cluster-size": 4
+			},
+			"cluster-count": 16,
+			"min-height": 0,
+			"max-height": 100,
+			"retrogen": "true",
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		}
+	}
+}

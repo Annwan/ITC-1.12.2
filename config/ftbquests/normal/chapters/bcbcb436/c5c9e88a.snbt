@@ -1,0 +1,20 @@
+{
+	x: 1.5d,
+	y: 0.0d,
+	shape: "gear",
+	dependencies: [
+		"7558ef95"
+	],
+	tasks: [{
+		uid: "9b5947a9",
+		type: "item",
+		items: [{
+			id: "minecraft:book",
+			tag: {
+				display: {
+					Name: "End"
+				}
+			}
+		}]
+	}]
+}

@@ -1,0 +1,21 @@
+{
+	x: 0.5d,
+	y: 0.5d,
+	shape: "heart",
+	dependencies: [
+		"6340bec0"
+	],
+	tasks: [{
+		uid: "903023c6",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 32627"
+		}],
+		consume_items: true
+	}],
+	rewards: [{
+		uid: "f262eefe",
+		type: "ftbmoney:money",
+		ftb_money: 1L
+	}]
+}

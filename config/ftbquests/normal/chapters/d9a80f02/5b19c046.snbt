@@ -1,0 +1,21 @@
+{
+	x: 1.0d,
+	y: -1.0d,
+	shape: "square",
+	can_repeat: true,
+	dependencies: [
+		"6340bec0"
+	],
+	tasks: [{
+		uid: "83306d79",
+		type: "checkmark",
+		title: "End",
+		icon: "minecraft:book"
+	}],
+	rewards: [{
+		uid: "f6285dda",
+		type: "command",
+		icon: "minecraft:end_portal_frame",
+		command: "/tpj 1 103 57 43"
+	}]
+}

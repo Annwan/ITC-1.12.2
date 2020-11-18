@@ -1,0 +1,21 @@
+{
+	x: 0.0d,
+	y: 0.0d,
+	shape: "gear",
+	dependencies: [
+		"7558ef95"
+	],
+	dependency_requirement: "all_started",
+	tasks: [{
+		uid: "602096f9",
+		type: "item",
+		items: [{
+			id: "minecraft:book",
+			tag: {
+				display: {
+					Name: "Nether"
+				}
+			}
+		}]
+	}]
+}

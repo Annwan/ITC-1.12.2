@@ -1,0 +1,7 @@
+{
+	title: "Start",
+	icon: "minecraft:log",
+	always_invisible: false,
+	group: -1489542488,
+	default_quest_shape: ""
+}

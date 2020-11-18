@@ -1,0 +1,13 @@
+{
+	title: "Dim",
+	icon: {
+		id: "appliedenergistics2:facade",
+		tag: {
+			damage: 0,
+			item: "rftoolsdim:dimensional_cross2_block"
+		}
+	},
+	always_invisible: false,
+	group: -1489542488,
+	default_quest_shape: ""
+}
