@@ -33,7 +33,7 @@ fileHolder = {
 }
 
 headers = {
-    'User-Agent': 'pack formater/downloader'
+    'User-Agent': 'PackFormaterDownloader/1.0'
 }
 
 #==#===#==# Functions #==#===#==#
