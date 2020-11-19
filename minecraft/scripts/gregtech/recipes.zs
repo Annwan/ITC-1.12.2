@@ -19,16 +19,18 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 
 assembly_line.recipeBuilder()
-    .inputs(<gtadditions:ga_meta_item:32008> * 64,
-            <gtadditions:ga_meta_item:32008> * 64,
-            <gtadditions:ga_meta_item:32008> * 64,
-            <thermalfoundation:material:359>,
-            <gregtech:meta_item_1:32677>,
-            <gtadditions:ga_meta_item:32018> *24,
-            <gregtech:meta_item_1:32724> *20,
-            <gregtech:meta_item_1:32725> *64,
-            <genetics:misc:8>,
-            <gtadditions:ga_meta_item:32011> *64)
+    .inputs([
+		<gtadditions:ga_meta_item:32008> * 64,
+		<gtadditions:ga_meta_item:32008> * 64,
+		<gtadditions:ga_meta_item:32008> * 64,
+		<thermalfoundation:material:359>,
+		<gregtech:meta_item_1:32677>,
+		<gtadditions:ga_meta_item:32018> *24,
+		<gregtech:meta_item_1:32724> *20,
+		<gregtech:meta_item_1:32725> *64,
+		<genetics:misc:8>,
+		<gtadditions:ga_meta_item:32011> *64
+	])
     .fluidInputs(<liquid:soldering_alloy> * 4000)
 	.fluidInputs(<liquid:neutronium> * 4000)
     .outputs(<sgcraft:zpm>)

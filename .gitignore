@@ -21,3 +21,9 @@ minecraft/optionsshaders.txt
 minecraft/mods
 minecraft/shaderpacks
 minecraft/servers.dat
+instance.cfg
+IC2.ini
+InvTweaks.cfg
+buildcraft/*
+bookmarks.ini
+worldSettings.cfg
