@@ -1,6 +1,5 @@
 import json
 import requests
-from sys import argv
 HEADERS = { # const
     'User-Agent': 'PackFormaterDownloader/1.0'
 }
