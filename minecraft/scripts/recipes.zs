@@ -1,5 +1,5 @@
 #loader crafttweaker
-#modloaded thermalexpansion thermalfoundation appliedenergistics2 railcraft projecte gtadditions binnie
+#modloaded thermalexpansion railcraft projecte gtadditions unidict
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
@@ -9,61 +9,69 @@ import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.item.WeightedItemStack;
 
+val remove = [
+    <ic2:bronze_pickaxe>,
+    <projecte:item.pe_philosophers_stone>,
+    <projecte:matter_block:1>,
+    <projecte:matter_block>,
+    <railcraft:gear:3>,
+] as IItemStack[];
 
-val ironsword = <minecraft:iron_sword>;
-val goldsword = <minecraft:golden_sword>;
-val diamondsword = <minecraft:diamond_sword>;
-val certussword = <appliedenergistics2:certus_quartz_sword>;
-val nethersword = <appliedenergistics2:nether_quartz_sword>;
+val removeAndHide = [
+    <gregtech:meta_item_1:32304>,
+    <buildcraftcore:gear_diamond>,
+    <buildcraftcore:gear_gold>,
+    <buildcraftcore:gear_iron>,
+    <buildcraftcore:gear_stone>,
+    <buildcraftcore:gear_wood>,
+    <forestry:gear_bronze>,
+    <forestry:gear_copper>,
+    <forestry:gear_tin>,
+    <appliedenergistics2:material:40>,
+] as IItemStack[];
 
+val recipesReplace = {
+    <minecraft:iron_sword> : [[null,<ore:plateIron>,null], [null,<ore:plateIron>,null], [<gregtech:meta_tool:9>,<ore:stickWood>,<gregtech:meta_tool:6>]],
+    <minecraft:golden_sword> : [[null,<ore:plateGold>,null], [null,<ore:plateGold>,null], [<gregtech:meta_tool:9>,<ore:stickWood>,<gregtech:meta_tool:6>]],
+    <appliedenergistics2:certus_quartz_sword> : [[null,<ore:plateCertusQuartz>,null], [null,<ore:plateCertusQuartz>,null], [<gregtech:meta_tool:9>,<ore:stickWood>,<gregtech:meta_tool:6>]],
+    <appliedenergistics2:nether_quartz_sword> : [[null,<ore:plateNetherQuartz>,null], [null,<ore:plateNetherQuartz>,null], [<gregtech:meta_tool:9>,<ore:stickWood>,<gregtech:meta_tool:6>]],
+    <minecraft:diamond_sword> : [[null,<ore:plateDiamond>,null], [null, <ore:plateDiamond>, null], [<gregtech:meta_tool:9>,<ore:stickWood>,<gregtech:meta_tool:6>]],
+    <projecte:item.pe_matter:1> : [[<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>], [<projecte:item.pe_matter>,<projecte:item.pe_matter>,<projecte:item.pe_matter>], [<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>]],
+    <projecte:item.pe_matter> : [[<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>], [<projecte:item.pe_fuel:2>,<ore:blockDiamond>,<projecte:item.pe_fuel:2>], [<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>,<projecte:item.pe_fuel:2>]],
+    // : [[,,], [,,], [,,]],
+} as IIngredient[][][IItemStack];
 
-//#Remove
-recipes.remove(<thermalfoundation:material:24>);
-recipes.remove(<thermalfoundation:material:25>);
-recipes.removeShaped(<thermalfoundation:material:25>, [[null, <minecraft:gold_ingot>, null],[<minecraft:gold_ingot>, <thermalfoundation:material:24>, <minecraft:gold_ingot>], [null, <minecraft:gold_ingot>, null]]);
-recipes.remove(<thermalfoundation:material:24>);
-recipes.remove(<thermalfoundation:material:25>);
-recipes.remove(<thermalfoundation:material:26>);
-mods.jei.JEI.removeAndHide(<buildcraftcore:gear_wood>);
-mods.jei.JEI.removeAndHide(<appliedenergistics2:material:40>);
-mods.jei.JEI.removeAndHide(<buildcraftcore:gear_stone>);
-mods.jei.JEI.removeAndHide(<buildcraftcore:gear_diamond>);
-recipes.remove(<thermalfoundation:material:23>);
-recipes.remove(<railcraft:gear:3>);
-mods.jei.JEI.removeAndHide(<gregtech:meta_item_1:32304>);
-recipes.remove(<thermalfoundation:material:25>);
-recipes.remove(<thermalfoundation:material:24>);
-recipes.remove(<thermalfoundation:material:22>);
-recipes.remove(<railcraft:gear>);
-recipes.remove(<projecte:item.pe_philosophers_stone>);
-recipes.remove(<projecte:item.pe_matter>);
-recipes.remove(<projecte:matter_block>);
-recipes.remove(<projecte:item.pe_matter:1>);
-recipes.remove(<projecte:matter_block:1>);
-recipes.remove(ironsword);
-recipes.remove(goldsword);
-recipes.remove(diamondsword);
-recipes.remove(certussword);
-recipes.remove(nethersword);
-recipes.remove(<ic2:bronze_pickaxe>);
-//Don't touch me!
-//#Add
-recipes.addShaped(<thermalfoundation:material:26>, [[<ore:stickDiamond>, <ore:plateDiamond>, <ore:stickDiamond>],[<ore:plateDiamond>, <ore:craftingToolScrewdriver>, <ore:plateDiamond>], [<ore:stickDiamond>, <ore:plateDiamond>, <ore:stickDiamond>]]);
-recipes.addShapedMirrored(<thermalfoundation:material:25>, [[<ore:stickGold>, <ore:plateGold>, <ore:stickGold>],[<ore:plateGold>, <gregtech:meta_tool:11>, <ore:plateGold>], [<ore:stickGold>, <ore:plateGold>, <ore:stickGold>]]);
-recipes.addShapedMirrored(<thermalfoundation:material:23>, [[<ore:rodStone>, <ore:plateStone>, <ore:rodStone>],[<ore:plateStone>, <gregtech:meta_tool:11>, <ore:plateStone>], [<ore:rodStone>, <ore:plateStone>, <ore:rodStone>]]);
-recipes.addShaped(<thermalfoundation:material:24>, [[<ore:stickIron>, <ore:plateIron>, <ore:stickIron>],[<ore:plateIron>, <gregtech:meta_tool:11>, <ore:plateIron>], [<ore:stickIron>, <ore:plateIron>, <ore:stickIron>]]);
-recipes.addShaped(<thermalfoundation:material:22>, [[<ore:stickWood>, <ore:plankWood>, <ore:stickWood>],[<ore:plankWood>, <gregtech:meta_tool:11>, <ore:plankWood>], [<ore:stickWood>, <ore:plankWood>, <ore:stickWood>]]);
-recipes.addShapedMirrored(<railcraft:gear>, [[<ore:stickBrass>, <ore:plateBrass>, <ore:stickBrass>],[<ore:plateBrass>, <gregtech:meta_tool:11>, <ore:plateBrass>], [<ore:stickBrass>, <ore:plateBrass>, <ore:stickBrass>]]);
-recipes.addShapedMirrored(<projecte:item.pe_matter:1>, [[<projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>],[<projecte:item.pe_matter>, <projecte:item.pe_matter>, <projecte:item.pe_matter>], [<projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>]]);
-recipes.addShaped(<projecte:item.pe_matter>, [[<projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>],[<projecte:item.pe_fuel:2>, <ore:blockDiamond>, <projecte:item.pe_fuel:2>], [<projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>, <projecte:item.pe_fuel:2>]]);
-recipes.addShapedMirrored(ironsword, [[null, <ore:plateIron>, null],[null, <ore:plateIron>, null], [<gregtech:meta_tool:9>, <ore:stickWood>, <gregtech:meta_tool:6>]]);
-recipes.addShapedMirrored(goldsword, [[null, <ore:plateGold>, null],[null, <ore:plateGold>, null], [<gregtech:meta_tool:9>, <ore:stickWood>, <gregtech:meta_tool:6>]]);
-recipes.addShapedMirrored(diamondsword, [[null, <ore:plateDiamond>, null],[null, <ore:plateDiamond>, null], [<gregtech:meta_tool:9>, <ore:stickWood>, <gregtech:meta_tool:6>]]);
-recipes.addShapedMirrored(certussword, [[null, <ore:plateCertusQuartz>, null],[null, <ore:plateCertusQuartz>, null], [<gregtech:meta_tool:9>, <ore:stickWood>, <gregtech:meta_tool:6>]]);
-recipes.addShapedMirrored(nethersword, [[null, <ore:plateNetherQuartz>, null],[null, <ore:plateNetherQuartz>, null], [<gregtech:meta_tool:9>, <ore:stickWood>, <gregtech:meta_tool:6>]]);
-//File End
+val gearReplace = {
+    <thermalfoundation:material:22> : [<ore:stickWood>, <ore:plankWood>],
+    <thermalfoundation:material:23> : [<ore:rodStone>,<ore:plateStone>],
+    <thermalfoundation:material:24> : [<ore:stickIron>,<ore:plateIron>],
+    <thermalfoundation:material:25> : [<ore:stickGold>,<ore:plateGold>],
+    <thermalfoundation:material:26> : [<ore:stickDiamond>,<ore:plateDiamond>],
+    <thermalfoundation:material:27> : [<ore:stickEmerald>,<ore:plateEmerald>],
+    <railcraft:gear> : [<ore:stickBrass>,<ore:plateBrass>],
+    // : [,],
+} as IIngredient[][IItemStack];
+
+for item in remove {
+    recipes.remove(item);
+}
+
+for item in removeAndHide {
+    mods.jei.JEI.removeAndHide(item);
+}
+
+for key,recipe in recipesReplace {
+	recipes.remove(key);
+    recipes.addShaped(key, recipe);
+}
+
+for key,materials in gearReplace {
+    recipes.remove(key);
+    recipes.addShaped(key,[[materials[0],materials[1],materials[0]], [materials[1],<ore:craftingToolScrewdriver>,materials[1]], [materials[0],materials[1],materials[0]]]);
+}
 
 mods.thermalexpansion.Centrifuge.addRecipe([(<gtadditions:ga_meta_item:32018>) % 5], <minecraft:egg>, <liquid:binnie.dna.raw> * 1000, 80000);
+
 mods.thermalexpansion.Factorizer.addRecipeSplit(<projecte:matter_block>, <projecte:item.pe_matter> *4);
 mods.thermalexpansion.Factorizer.addRecipeSplit(<projecte:matter_block:1>, <projecte:item.pe_matter:1> *4);
 mods.thermalexpansion.Factorizer.addRecipeCombine(<projecte:item.pe_matter> *4, <projecte:matter_block>);
