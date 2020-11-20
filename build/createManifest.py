@@ -1,4 +1,5 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
+# -*- encoding:utf-8 -*-
 
 import requests
 import json
@@ -60,6 +61,7 @@ for mod in humanManifest["modlist"]:
     fileDict["projectID"] = mod["id"]
 
     if mod["version"] == "latest":
+        print("getting info for mod {}({})".format(mod["name"], mod["id"]))
         modFileList = requests.get("https://addons-ecs.forgesvc.net/api/v2/addon/{}/files".format(mod["id"]),headers=headers)
         try:
             fileDict["fileID"] = findLatestFileID(modFileList.json())
@@ -72,5 +74,6 @@ for mod in humanManifest["modlist"]:
     machineManifest["files"].append(fileDict)
 
 with open("manifest.json","w+") as output:
+    print("writing manifest")
     json.dump(machineManifest,output,indent=4)
 
